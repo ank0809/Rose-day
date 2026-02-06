@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .rose-container {
+        margin: 30px auto;
+        width: 180px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
+    }
+
+    button {
+        background: #fff;
+        color: #ff4d6d;
+        border: none;
+        padding: 12px 22px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-content {
+        background: #fff;
+        color: #ff4d6d;
+        padding: 25px;
+        border-radius: 20px;
+        width: 85%;
+        max-width: 320px;
+        animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.7); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    footer {
+        margin-top: 40px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Happy Rose Day, My Favorite Person 🌹</h1>
+
+<p>
+This rose isn’t just a flower,<br>
+it’s a little piece of my heart —<br>
+reminding you that no matter the distance,<br>
+my love always finds its way to you 💖
+</p>
+
+<!-- 🌹 CARTOON ROSE -->
+<div class="rose-container">
+<svg viewBox="0 0 200 300" width="100%" height="100%">
+    <circle cx="100" cy="80" r="45" fill="#ff4d6d"/>
+    <circle cx="80" cy="70" r="30" fill="#ff6f91"/>
+    <circle cx="120" cy="70" r="30" fill="#ff6f91"/>
+    <circle cx="100" cy="50" r="25" fill="#ff8fab"/>
+
+    <rect x="95" y="120" width="10" height="120" fill="#2ecc71"/>
+
+    <ellipse cx="70" cy="180" rx="30" ry="15" fill="#2ecc71" transform="rotate(-20 70 180)"/>
+    <ellipse cx="130" cy="200" rx="30" ry="15" fill="#2ecc71" transform="rotate(20 130 200)"/>
+</svg>
+</div>
+
+<p>
+Just like a rose needs care to bloom,<br>
+my heart blooms a little more every time I think of you.<br><br>
+You’re not just someone I love —<br>
+you’re the reason love feels this beautiful 🌹
+</p>
+
+<button onclick="openPopup()">🌹 A Rose, Just for You 🌹</button>
+
+<!-- 🎵 AUDIO -->
+<audio id="loveSong" loop>
+    <!-- 🔴 CHANGE THIS LINK TO YOUR SONG -->
+    <source src="https://github.com/ank0809/Valentine/raw/main/rhnuma_raone_srk.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 💌 POPUP -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>My Forever Rose 🌹</h2>
+        <p>
+        If I could give you one thing in life,<br>
+        it would be the ability to see yourself<br>
+        through my eyes —<br><br>
+        because then you’d know<br>
+        just how deeply, endlessly,<br>
+        and quietly I love you 💕
+        </p>
+        <button onclick="closePopup()">Close 💗</button>
+    </div>
+</div>
+
+<footer>
+Always yours, in every season 🌸<br>
+— Your Farzi Engineer 😌
+</footer>
+
+<script>
+function openPopup() {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("loveSong").play();
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    const song = document.getElementById("loveSong");
+    song.pause();
+    song.currentTime = 0;
+}
+</script>
+
+</body>
+</html>
